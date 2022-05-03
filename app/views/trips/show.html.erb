@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :body_class do %>trips<% end %>
+<% content_for :title do %>
+  <%= @trip.title %>
+<% end %>
+
+<%= render @trip %>
+

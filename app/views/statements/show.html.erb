@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @statement %>
+
+<div>
+  <%= link_to "Edit this statement", edit_statement_path(@statement) %> |
+  <%= link_to "Back to statements", statements_path %>
+
+  <%= button_to "Destroy this statement", @statement, method: :delete %>
+</div>

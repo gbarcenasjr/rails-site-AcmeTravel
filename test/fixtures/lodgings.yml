@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trip: one
+  position: 1
+  name: MyString
+  location: MyString
+  level: MyString
+  number_of_nights: MyString
+  description: MyText
+  photo: MyString
+  photo_alt: MyString
+
+two:
+  trip: two
+  position: 1
+  name: MyString
+  location: MyString
+  level: MyString
+  number_of_nights: MyString
+  description: MyText
+  photo: MyString
+  photo_alt: MyString

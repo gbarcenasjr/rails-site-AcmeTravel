@@ -1,0 +1,42 @@
+<%= form_with(model: itinerary_day) do |form| %>
+  <% if itinerary_day.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(itinerary_day.errors.count, "error") %> prohibited this itinerary_day from being saved:</h2>
+
+      <ul>
+        <% itinerary_day.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :trip_id, style: "display: block" %>
+    <%= form.text_field :trip_id %>
+  </div>
+
+  <div>
+    <%= form.label :days, style: "display: block" %>
+    <%= form.text_field :days %>
+  </div>
+
+  <div>
+    <%= form.label :header, style: "display: block" %>
+    <%= form.text_field :header %>
+  </div>
+
+  <div>
+    <%= form.label :day_text, style: "display: block" %>
+    <%= form.text_area :day_text %>
+  </div>
+
+  <div>
+    <%= form.label :position, style: "display: block" %>
+    <%= form.number_field :position %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

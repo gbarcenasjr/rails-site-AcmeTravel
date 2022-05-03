@@ -1,0 +1,98 @@
+<div id="<%= dom_id trip %>">
+  <p>
+    <strong>Title:</strong>
+    <%= trip.title %>
+  </p>
+
+  <p>
+    <strong>Subtitle:</strong>
+    <%= trip.subtitle %>
+  </p>
+
+  <p>
+    <strong>Defaultprice:</strong>
+    <%= trip.defaultprice %>
+  </p>
+
+  <p>
+    <strong>Meet:</strong>
+    <%= trip.meet %>
+  </p>
+
+  <p>
+    <strong>Depart:</strong>
+    <%= trip.depart %>
+  </p>
+
+  <p>
+    <strong>Terrain:</strong>
+    <%= trip.terrain %>
+  </p>
+
+  <p>
+    <strong>Intro:</strong>
+    <%=simple_format trip.intro %>
+  </p>
+
+  <p>
+    <strong>Key words:</strong>
+    <%= trip.key_words %>
+  </p>
+
+  <p>
+    <strong>Large map image:</strong>
+    <%= image_tag trip.large_map_image, alt: trip.large_map_alt %>
+  </p>
+
+  <p>
+    <strong>Large map alt:</strong>
+    <%= trip.large_map_alt %>
+  </p>
+
+  <p>
+    <strong>Main photo alt:</strong>
+    <%= trip.main_photo_alt %>
+  </p>
+
+
+
+  <p>
+    <strong>Thumbnail photo alt:</strong>
+    <%= trip.thumbnail_photo_alt %>
+  </p>
+
+  <p>
+    <strong>Highlights:</strong>
+    <%= simple_format(trip.highlights) %>
+  </p>
+
+  <p>
+    <strong>Main image:</strong>
+    <%= trip.main_image %>
+  </p>
+
+  <% @trip.lodgings.each do |lodge| %>
+    <div class="lodge">
+      <h2><%= lodge.name %> (<%= lodge.location %>)</h2>
+      <p><%= simple_format lodge.description %></p>
+      <%= image_tag lodge.photo, alt: lodge.photo_alt %>
+    </div>
+  <% end %>
+
+  <% @trip.departures.each do |departure| %>
+  <p>
+    <%= departure.departure_date %>
+    <%= departure.return_date %>
+    <%= departure.price %>
+    <%= departure.difficulty_level %>
+  </p>
+
+  <% end %>
+<p>
+  <strong>Destinations:</strong>
+  <% @trip.destinations.each do |destination| %>
+    <%= destination.name %>
+  <% end %>
+
+</p>
+</div>

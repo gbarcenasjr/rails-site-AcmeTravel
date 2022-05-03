@@ -1,0 +1,97 @@
+<%= form_with(model: trip) do |form| %>
+  <% if trip.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+
+      <ul>
+        <% trip.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :subtitle, style: "display: block" %>
+    <%= form.text_field :subtitle %>
+  </div>
+
+  <div>
+    <%= form.label :defaultprice, style: "display: block" %>
+    <%= form.number_field :defaultprice %>
+  </div>
+
+  <div>
+    <%= form.label :meet, style: "display: block" %>
+    <%= form.text_field :meet %>
+  </div>
+
+  <div>
+    <%= form.label :depart, style: "display: block" %>
+    <%= form.text_field :depart %>
+  </div>
+
+  <div>
+    <%= form.label :terrain, style: "display: block" %>
+    <%= form.text_area :terrain %>
+  </div>
+
+  <div>
+    <%= form.label :intro, style: "display: block" %>
+    <%= form.text_area :intro %>
+  </div>
+
+  <div>
+    <%= form.label :key_words, style: "display: block" %>
+    <%= form.text_area :key_words %>
+  </div>
+
+  <div>
+    <%= form.label :map_image, style: "display: block" %>
+    <%= form.text_field :map_image %>
+  </div>
+
+  <div>
+    <%= form.label :large_map_image, style: "display: block" %>
+    <%= form.text_field :large_map_image %>
+  </div>
+
+  <div>
+    <%= form.label :large_map_alt, style: "display: block" %>
+    <%= form.text_field :large_map_alt %>
+  </div>
+
+  <div>
+    <%= form.label :main_photo_alt, style: "display: block" %>
+    <%= form.text_field :main_photo_alt %>
+  </div>
+
+  <div>
+    <%= form.label :small_map_alt, style: "display: block" %>
+    <%= form.text_field :small_map_alt %>
+  </div>
+
+  <div>
+    <%= form.label :thumbnail_photo_alt, style: "display: block" %>
+    <%= form.text_field :thumbnail_photo_alt %>
+  </div>
+
+  <div>
+    <%= form.label :highlights, style: "display: block" %>
+    <%= form.text_area :highlights %>
+  </div>
+
+  <div>
+    <%= form.label :main_image, style: "display: block" %>
+    <%= form.text_field :main_image %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

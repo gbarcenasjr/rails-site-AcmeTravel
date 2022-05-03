@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Departures</h1>
+
+<div id="departures">
+  <% @departures.each do |departure| %>
+    <%= render departure %>
+    <p>
+      <%= link_to "Show this departure", departure %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New departure", new_departure_path %>

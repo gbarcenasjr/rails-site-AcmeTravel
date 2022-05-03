@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @itinerary_day %>
+
+<div>
+  <%= link_to "Edit this itinerary day", edit_itinerary_day_path(@itinerary_day) %> |
+  <%= link_to "Back to itinerary days", itinerary_days_path %>
+
+  <%= button_to "Destroy this itinerary day", @itinerary_day, method: :delete %>
+</div>

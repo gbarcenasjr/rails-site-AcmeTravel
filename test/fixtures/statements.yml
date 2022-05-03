@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trip: one
+  weight: 1
+  header: MyString
+  content: MyText
+
+two:
+  trip: two
+  weight: 1
+  header: MyString
+  content: MyText

@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Trips</h1>
+
+<div id="trips">
+  <% @trips.each do |trip| %>
+   <div>
+     <%= image_tag trip.main_image, alt: trip.main_photo_alt %>
+     <h2><%= link_to trip.title, trip %></h2>
+     <p class="intro"><%=simple_format trip.intro %></p>
+
+   </div>
+    <hr>
+  <% end %>
+</div>
+
