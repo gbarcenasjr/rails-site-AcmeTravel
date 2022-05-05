@@ -4,7 +4,7 @@ services:
       image: mysql:8.0.28
       container_name: cs351AcmeTravelDatabase
       # Uncomment the line below if you're on a new Apple M1 computer
-      # platform: linux/amd64
+      platform: linux/amd64
       restart: always
       environment:
         MYSQL_ROOT_PASSWORD: changeme

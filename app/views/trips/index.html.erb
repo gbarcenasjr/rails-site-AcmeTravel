@@ -5,7 +5,7 @@
 <div id="trips">
   <% @trips.each do |trip| %>
    <div>
-     <%= image_tag trip.main_image, alt: trip.main_photo_alt %>
+     <%= image_tag trip.main_image, alt: trip.main_photo_alt, :align => "center" %>
      <h2><%= link_to trip.title, trip %></h2>
      <p class="intro"><%=simple_format trip.intro %></p>
 
@@ -13,4 +13,3 @@
     <hr>
   <% end %>
 </div>
-

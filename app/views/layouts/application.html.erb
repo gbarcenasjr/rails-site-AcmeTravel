@@ -19,29 +19,47 @@
       <%= link_to root_path do %>
         <%= image_tag "https://s3.us-west-1.amazonaws.com/professor.raupach/acme_travel/images/logo-horizontal.png", alt: "Acme Adventure Logo" %>
       <% end %>
-      <h1>Acme Adventure Travel</h1>
 
     </div>
-    <nav>
-      <ul>
-
-        <li><%= link_to "Home",  root_path %></li>
-        <li><%= link_to "Why Travel With Us", why_path %></li>
-        <li><%= link_to "Our Trips", trips_path %></li>
-        <li><a href="/catalog-request.html">Catalog Requests</a></li>
-      </ul>
+    <nav class="site-nav grid">
+      <button class="button"
+              onclick="window.location.href = '/index.html';">
+        Home Page
+      </button>
+      <button class="button"
+              onclick="window.location.href = '/why-travel-with-us.html';">
+        Why Travel With Us
+      </button>
+      <button class="button"
+              onclick="window.location.href = '/trips.html';">
+        Our Trips
+      </button>
+      <button class="button"
+              onclick="window.location.href = '/catalog-request.html';">
+        Catalog Requests
+      </button>
     </nav>
   </header>
-  <main>
+
+  <main class="content">
     <%= yield %>
   </main>
+
   <footer>
     <hr>
-    <div id="copyright">Copyright ©<%= Date.today.year %> Acme Adventure Travel, Inc.</div>
-    <ul id="footer-links">
-      <li><%= link_to "Privacy Policy", privacy_path  %> </li>
-      <li><%= link_to "Contact Us", new_contact_us_request_path %> </li>
-    </ul>
+    <div id="copyright">
+      <p>Copyright © 2021 Acme Adventure Travel, Inc.</p>
+    </div>
+    <div id="footer-links">
+      <button class="button"
+              onclick="window.location.href = '/privacy-policy.html';">
+        Privacy Policy
+      </button>
+      <button class="button"
+              onclick="window.location.href = '/contact-us.html;';">
+        Contact Us
+      </button>
+    </div>
   </footer>
   </body>
 </html>

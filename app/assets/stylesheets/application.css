@@ -14,6 +14,175 @@
  *= require_self
  */
 
+:root {
+    --bgColor: #294243;
+    --primary: #576b4d;
+    --buttonColor: #885745;
+    --fontColor: #E5E4CC;
+    font-family: Georgia, serif;
+    color: var(--fontColor);
+    margin: 0.5em 1em 1em 1em;
+}
+h1 {
+    margin: 0 0 0.2em 0;
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: left;
+}
+
+p{
+    margin: 0.5em 0 0.5em 0 ;
+    font-size: 2.5em;
+    text-align: left;
+}
+
+li {
+    margin: 0.5em 0 0.5em 0 ;
+    font-size: 1.25em;
+    text-align: left;
+}
+
 body {
-    background-color: lightgoldenrodyellow;
+    background-color: var(--bgColor);
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    "header header"
+    "content content"
+    "footer footer";
+    gap: 1em;
+}
+
+article {
+    padding: 2em;
+}
+
+form {
+    position : relative;
+    width  : 80%;
+    padding: 1em;
+    box-sizing: border-box;
+    font-size: 3em;
+
+    display  : grid;
+    grid-gap : 20px;
+    grid-template-columns : repeat(1fr);
+    grid-template-rows    : 1em 1em 1em 1em;
+}
+#mission-statement h2{
+    margin: 0;
+}
+
+#mission-statement-result div{
+    font-size: 2em;
+}
+
+input, textarea, select, button {
+    width : 50%;
+    font-size: 0.75em;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 2em;
+}
+
+.button {
+    border: 2px solid var(--bgColor);
+    color: var(--fontColor);
+    padding: 24px 12px;
+    border-radius: 25px;
+    background-color: var(--buttonColor);
+    font-size: 3em;
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--primary);
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.field-group {
+
+}
+
+header {
+    grid-area: header;
+    padding-bottom: 1em;
+}
+
+main {
+    grid-area: content;
+    background-color: var(--primary);
+    border-radius: 25px;
+}
+footer {
+    grid-area: footer;
+    padding-top: 1em;
+}
+footer p {
+    text-align: center;
+}
+
+footer .button{
+    width: 49.7%;
+    margin-top: 10px;
+    display: inline;
+}
+
+
+/* DESKTOP DESIGN */
+@media screen and (min-width: 768px) {  /*Adjust to 1080px if mobile version isn't showing automatically*/
+    h1 {
+        font-size: 4em;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    p{
+        font-size: 1.5em;
+        text-align: left;
+    }
+    .button {
+        border: 2px solid var(--bgColor);
+        color: var(--fontColor);
+        padding: 15px 15px;
+        border-radius: 10px;
+        background-color: var(--buttonColor);
+        font-size: 1.4em;
+        width: 24.6%;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+    }
+    main {
+        grid-area: content;
+        background-color: var(--primary);
+        border-radius: 10px;
+    }
 }
