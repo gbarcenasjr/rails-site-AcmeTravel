@@ -1,3 +1,5 @@
+(Project instructions from the professor)
+
 # Acme Travel - Rails site
 
 In this assignment you're going to take your work from the previous assignments and update a rails site.  I've created most of the core site for you.  
