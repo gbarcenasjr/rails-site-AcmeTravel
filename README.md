@@ -7,7 +7,7 @@ In this assignment, you're going to take your work from the previous assignments
 ## To get going
 
 1. Clone this site to your computer.
-2. Change directory to you cloned copy of the site.
+2. Change directory to your cloned copy of the site.
 3. Use `docker-compose build` to build the image.
 4. Use `docker-compose up -d` to start the site.
 5. Go to http://localhost:3001 in a browser to see the site.
