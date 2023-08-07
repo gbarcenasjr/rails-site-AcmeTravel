@@ -2,7 +2,7 @@
 
 # Acme Travel - Rails site
 
-In this assignment you're going to take your work from the previous assignments and update a rails site.  I've created most of the core site for you.  
+In this assignment, you're going to take your work from the previous assignments and update a rails site.
 
 ## To get going
 
@@ -17,9 +17,9 @@ In this assignment you're going to take your work from the previous assignments 
 
 ## Part 1 Applying your Styles.
 
-If you use a single stylesheet for all the pages in the site then all you need to do is copy that css into the  `/app/assets/stylesheets/application.css` file.  Be sure to keep the leave the comments at the top. 
+If you use a single stylesheet for all the pages in the site, you only need to copy that css into the  `/app/assets/stylesheets/application.css` file.  Be sure to keep the leave the comments at the top. 
 
-If you used multiple stylesheets or different style sheets for different pages that's okay too.  Open up thet `app/views/layouts/application.html.erb` file and find the line `<%= yield :page_style_sheet %>` this will allow you to put a stylesheet tags in from the different pages. Copy the stylesheet file into `/app/assets/stylesheets/`. In the page where you have a particular stylesheet you want to use put:
+If you used multiple stylesheets or different style sheets for different pages, that's okay too.  Open up thet `app/views/layouts/application.html.erb` file and find the line `<%= yield :page_style_sheet %>` this will allow you to put a stylesheet tags in from the different pages. Copy the stylesheet file into `/app/assets/stylesheets/`. In the page where you have a particular stylesheet you want to use put:
 ```html
 <% content_for :page_style_sheet do %>
    <%= stylesheet_link_tag "[YourPageStylesheetHere]", "data-turbo-track": "reload" %>
@@ -60,7 +60,7 @@ Notice that the code inside the `<% @trips.each do |trip| %>` repeats for each t
 
 ## Part 4 Updating the trip page
 
-Next you're going to use one template for all the pages in the site.  You can find that template in two files.  First `app/views/trips/show.html.erb` which looks like this:
+Next you will use one template for all the pages in the site.  You can find that template in two files.  First `app/views/trips/show.html.erb` which looks like this:
 
 ```html
 <p style="color: green"><%= notice %></p>
